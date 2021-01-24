@@ -17,6 +17,10 @@ body {
 
 }
 
+h1 {
+  font-family: 'Merriweather';
+}
+
 p { 
   max-width: 25em; 
   margin: 2em auto;
