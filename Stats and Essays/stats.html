@@ -29,10 +29,36 @@
       <p>Brainstorming!</p>
       <li><a href="https://recsupport.commonapp.org/recommendersupport/s/article/What-are-the-2020-2021-Common-Application-essay-prompts" class="a_top_hypers;" style="color: black;"target="_blank">Essay Prompts</a></li>
     </div>
-    <textarea id="text" cols="200" rows="5" style="width:80%;"></textarea>
+    <textarea id="plan" cols="200" rows="5" style="width:80%;"></textarea>
     <div class="Header">
       <p>Write your essay!</p>
     </div>
-    <textarea id="text" cols="200" rows="5" maxlength = "1300" style="width:80%;"></textarea>
+
+    </textarea>
+        <textarea id="text" oninput="countWord()"
+        rows="5" cols="200"maxlength = "1300" style="width:80%;"> 
+    </textarea> 
+    <br><br> 
+  
+    <p> Word Count: 
+        <span id="show">0</span> 
+    </p> 
+  
+    <script> 
+        function countWord() { 
+  
+            var words = document 
+                .getElementById("text").value;
+            var count = 0; 
+            var split = words.split(' '); 
+            for (var i = 0; i < split.length; i++) { 
+                if (split[i] != "") { 
+                    count += 1; 
+                } 
+            }  
+            document.getElementById("show") 
+                .innerHTML = count; 
+        } 
+    </script> 
   </body>
 </html>
