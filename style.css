@@ -12,16 +12,60 @@ body {
   height: 100%;
   margin: 0px;
   padding: 0px;
+  font-family: "Merriweather", serif;
+  background: #e6ddc4;
+}
+
+p { 
+  max-width: 25em; 
+  margin: 2em auto;
+  padding: 0 1em;
+  color: rgba(25,25,25,.5);
+  
+  strong{
+    display: block;
+    text-align: center;
+    color: #000;
+  }
 }
 
 h2 {
   margin: 0;
-  padding-top: 20%;
-  padding-left: 10%;
+  padding-top: 15%;
+  text-align: center;
 }
 
 #text-container{
   margin-top: 10%;
+}
+
+/* Top Section */
+
+#board {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background: #e6ddc4;
+  background-size: cover;
+  height: 100%;
+  background-image: url(Clouds.png);
+
+  font-family: 'Merriweather', serif;
+  line-height: 1.5;
+  font-size: 3vmin;
+  @media (min-width: 600px) {
+    font-size: 18px;
+  }
+
+}
+
+.middlev{
+  max-height: 100%;
+  bottom-padding: 15%;
+}
+
+#text-path {
+  font-size: 36 px;
 }
 
 /* Button */
@@ -40,7 +84,7 @@ button {
   padding-right: 10px;
   padding-left:10px;
   border-radius: 5px;
-  
+
   font-family: 'Merriweather', serif;
   line-height: 1.5;
   font-size: 3vmin;
@@ -57,54 +101,11 @@ a {
   color: white;
 }
 
-#board {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  background: #e6ddc4;
-  background-size: cover;
-  height: 90%;
-
-  font-family: 'Merriweather', serif;
-  line-height: 1.5;
-  font-size: 3vmin;
-  @media (min-width: 600px) {
-    font-size: 18px;
-  }
-
-}
-
-.middle{
-  max-height: 100%;
-}
-
-
-.clouds {
-  position: absolute;
-  top: 3.8em;
-  bottom: 0;
-  height: 100%;
-  background-image: url(Clouds.png);
-  background-position: center;
-}
+/* Mid Section */
 
 #thanks-message {
   font-size: 30px;
 }
-
-p { 
-  max-width: 25em; 
-  margin: 2em auto;
-  padding: 0 1em;
-  color: rgba(25,25,25,.5);
-  
-  strong{
-    display: block;
-    text-align: center;
-    color: #000;
-  }
-}
-
 
 
 /* side bar */
@@ -130,24 +131,26 @@ p {
   color: #e6ddc4;
 }
 
-/* span#name {
-  position: absolute;
-  margin-right: auto;
-  margin-left:auto;
-  top: 15px;
-  color: white;
-} */
-
 #info{
   background: #e6ddc4;
   height: 250 px;
   width: 100%;
-  padding-bottom: 5%
 }
 
-body {
-  font-family: "Merriweather", serif;
+.why {
+  background: #e6ddc4;
+  color: #1a1937;
+  font-size: 30px;
 }
+
+.p-info {
+  background: white;
+  color: black;
+  border-radius: 5px;
+  padding: 15px;
+  font-size: 24px;
+}
+/* Side Bar */
 
 .sidenav {
   height: 100%;
@@ -191,51 +194,14 @@ body {
 }
 
 /* bottom section */
-#bottom {
-  color: #1a1937;
-  margin-top: 50%;
+#wave {
+  background-image: url(wave.svg);
   width: 100%;
-  height: 250 px;
+  height: 75 px;
 }
 
-/* Dropdown Button */
-.dropbtn {
-  background-color: #e38a2e;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
+#bottom {
+  background-color: #1a1937;
+  width: 100%;
+  height: 250px;
 }
-
-/* The container <div> - needed to position the dropdown content */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-/* Dropdown Content (Hidden by Default) */
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 700px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-/* Links inside the dropdown */
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-/* Change color of dropdown links on hover */
-.dropdown-content a:hover {background-color: #ddd;}
-
-/* Show the dropdown menu on hover */
-.dropdown:hover .dropdown-content {display: block;}
-
-/* Change the background color of the dropdown button when the dropdown content is shown */
-.dropdown:hover .dropbtn {background-color: #8e6e3e;}
