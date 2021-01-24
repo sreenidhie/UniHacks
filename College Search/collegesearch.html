@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="../style.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>College Search</title>
+    <link href="../style.css" rel="stylesheet" type="text/css" />
+        <script src="../script.js"></script>
+        <!-- side-nav-bar-->
+    <div id="rectangle"></div>
+    <div id="mySidenav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="../index.html">Home</a>
+      <a href="../College Search/collegesearch.html">College Search</a>
+      <a href="../Stats and Essays/stats.html">Essay Planning</a>
+      <a href="../Explore and Resources/explore.html">More Resources</a>
+    </div>
+    <span id="bar-icon" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;
+    </span>
+    <center> <h1> College Search </h1> </center>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script>
+    function button(){
+      $(document).ready(function(){
+          $("button").click(function(){
+              $.getJSON("csvjson.json", function(result){
+                  $.each(result, function(i, obj){
+                      $("div").append(obj."School" + "<br>" + 
+                      "Tuition: " + obj."Tuition" + "<br>" + 
+                      "Location: " + obj."Location" + "<br>" + 
+                      "Average SAT: " +  obj."Average SAT" + "<br>" +
+                      "Average ACT: " + obj."Average ACT" + "<br>" +
+                      "Common App?: " + obj."Common App?" + "<br>" +
+                      "Application Fee: " + obj."Applicaton Fee" + "<br>" +
+                      "Campus Size: " + obj."Campus Size" + "<br>" +
+                      "% of Financial Aid Need Met: " + obj."Financial Aid Need Met %" + "<br>" +
+                      "Admissions Rate: " + obj."Admissions Rate" + "<br>" + 
+                      "Application Deadline: " + obj."Application Deadline" + "<br>" + 
+                      "ED/EA?: " + obj."ED/EA" + "<br>" + 
+                      "ED/EA Deadline: " + obj."ED/EA Deadline" + "<br>" + 
+                      "Top Major Field(s): " + obj."Top Major" + "<br>" + 
+                  });
+              });
+          });
+      });};
+    </script>
+  </head>
+
+  <body>
+      <script>
+      src="searchScript.js"
+      </script>
+      <button><a onclick = "button()">Get JSON data</a></button>
+  </body>
+
+</html>
