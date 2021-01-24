@@ -17,31 +17,26 @@ body {
 
 }
 
-h1 {
-  font-family: 'Merriweather';
-}
 
 p { 
   max-width: 25em; 
   margin: 2em auto;
   padding: 0 1em;
-  font-family: 'Merriweather';
   font-size: 27px;
   
   strong{
     display: block;
     text-align: center;
-    color: #000;
   }
 }
 
 h2 {
   margin: 0;
-  padding-top: 15%;
-  text-align: center;
+  /* padding-top: 15%; */
   font-size: 36px;
-  font-family: 'Merriweather', serif;
 }
+/* 
+.home-h2 {} */
 
 #text-container{
   margin-top: 10%;
@@ -70,9 +65,8 @@ h2 {
 }
 
 /* Button */
-button {
+#start-button {
   background-color: #e38a2e;
-  color: white;
   border:none;
   position: absolute;
   z-index: 2;
@@ -91,13 +85,14 @@ button {
   transition: all .2s linear;
 }
 
-button:hover {
-  background-color: #1a1937;
+#get-started {
+  color: white;
+  text-decoration: none;
 }
 
-a {
+#start-button:hover {
+  background-color: #1a1937;
   text-decoration: none;
-  color: white;
 }
 
 
@@ -133,6 +128,7 @@ a {
 .why {
   background: #e6ddc4;
   color: #1a1937;
+  padding-top: 15%;
 }
 
 .p-info {
@@ -155,7 +151,6 @@ a {
   transition: 0.5s;
   padding-top: 60px;
 
-  font-family: 'Merriweather', serif;
 }
 
 .sidenav a {
@@ -199,4 +194,3 @@ a {
   padding-top: 5%;
   padding-bottom: 0;
 }
-
