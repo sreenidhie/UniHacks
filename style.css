@@ -197,7 +197,7 @@ a {
 #wave {
   background-image: url(wave.svg);
   width: 100%;
-  background-size: cover;
+  height: 100%;
 }
 
 #bottom {
